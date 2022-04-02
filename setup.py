@@ -40,7 +40,7 @@ else:  # default
     extra_link_args = ["-std=c++11"]
 
 
-included_folders = ["./edit_operation"]
+included_folders = ["src/edit_operation"]
 c_library_extensions = ['cc', 'cpp', 'c', 'cxx']
 excluded_cpp_files = ["levenshtein.cpp"]
 
@@ -58,7 +58,7 @@ for folder_name in included_folders:
             source_file_list.append(filename)
 
 header_directory = list(set(header_directory))  # Remove duplicate values.
-source_file_list += ["./edit_operation/levenshtein.pyx"]  # Add the original pyx file for coord_list.
+source_file_list += ["src/edit_operation/levenshtein.pyx"]  # Add the original pyx file for coord_list.
 
 
 ext = Extension(name='edit_operation.levenshtein', 
@@ -69,5 +69,4 @@ ext = Extension(name='edit_operation.levenshtein',
                 language='c++')
 
 setup(name="edit_operation",
-      version='1.0.0',
       ext_modules=cythonize(ext))

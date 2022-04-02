@@ -33,7 +33,7 @@ from editdistpy import levenshtein
 
 a = 'absolute'
 b = 'absiluti'
-operations = levenshtein.edit_operations(a, b, -1)
+operations = levenshtein.edit_operations(a, b, is_damerau=True)
 
 """
 [{'operation': 'replace', 'location': 7, 'char_x': 'e', 'char_y': 'i'}, 

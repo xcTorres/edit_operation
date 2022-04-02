@@ -5,3 +5,5 @@ main
 main.dSYM
 *.so
 edit_operation/levenshtein.cpp
+edit_operation.egg-info
+dist
