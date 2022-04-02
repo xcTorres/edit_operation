@@ -1,4 +1,4 @@
- # EditdistPy
+ # edit_operation
 
  There are already several Python packages that implement levenshtein distance, which are writtend by C or C++ to improve the efficiency. In certain occasions, besides the edit distance, the edit operations are also needed. [python-Levenshtein](https://pypi.org/project/python-Levenshtein/) has the [editops](https://rawgit.com/ztane/python-Levenshtein/master/docs/Levenshtein.html#Levenshtein-editops) function but doesn't support transpose operations. So here comes the project, **editdistpy** supports the function of edit operations under [Damerau–Levenshtein distance](https://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance).
 
