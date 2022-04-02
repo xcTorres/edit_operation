@@ -1,0 +1,7 @@
+.vscode
+build
+.DS_store
+main
+main.dSYM
+*.so
+edit_operation/levenshtein.cpp
