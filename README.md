@@ -29,7 +29,7 @@ return -1 if the actual distance is beyond max_distance, by default max_distance
 ## edit_operations
 
 ```python
-from editdistpy import levenshtein
+from edit_operation import levenshtein
 
 a = 'absolute'
 b = 'absiluti'
