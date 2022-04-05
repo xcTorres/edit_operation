@@ -3,7 +3,7 @@ import sys
 import platform
 import glob
 from sysconfig import get_config_vars
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 from pkg_resources import parse_version
 from Cython.Build import cythonize
 
@@ -69,4 +69,4 @@ ext = Extension(name='edit_operation.levenshtein',
                 language='c++')
 
 setup(name="edit_operation",
-      ext_modules=cythonize(ext))
+      ext_modules=cythonize(ext),)

@@ -5,7 +5,7 @@
 
 # Install 
 ```python
-    pip install -e .
+    pip install -U edit_operation
 ```
 
 # Usage
