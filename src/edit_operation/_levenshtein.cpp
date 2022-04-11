@@ -214,7 +214,7 @@ vector<EditOperationSharedPtr> EditOperationsFromMatrix(
         // insertion
         if(n>0 && dp[m][n-1]+1 == dp[m][n]){
             EditOperationSharedPtr op;
-            if(m <= 0){
+            if(start+m <= 0){
                 op = EditOperationSharedPtr(new EditOperation(EditOperationType[1], start+m, '@', string2[start+n-1]));
             }else{
                 op = EditOperationSharedPtr(new EditOperation(EditOperationType[1], start+m, string1[start+m-1], string2[start+n-1]));
@@ -227,7 +227,7 @@ vector<EditOperationSharedPtr> EditOperationsFromMatrix(
         // deletion
         if(m>0 && dp[m-1][n]+1 == dp[m][n]){
             EditOperationSharedPtr op;
-            if(m-1 <= 0){
+            if(start+m-1 <= 0){
                 op = EditOperationSharedPtr(new EditOperation(EditOperationType[0], start+m-1, '@', string1[start+m-1]));
                 
             }else{
