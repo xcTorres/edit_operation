@@ -32,12 +32,12 @@ return -1 if the actual distance is beyond max_distance, by default max_distance
 from edit_operation import levenshtein
 
 a = 'absolute'
-b = 'absiluti'
+b = 'bsiluti'
 operations = levenshtein.edit_operations(a, b, is_damerau=True)
 
 """
 [{'operation': 'replace', 'location': 7, 'char_x': 'e', 'char_y': 'i'}, 
- {'operation': 'replace', 'location': 3, 'char_x': 'o', 'char_y': 'i'}]
+ {'operation': 'delete', 'location': 0, 'char_x': '@', 'char_y': 'a'}]
 """
 ```
-return empty list if the actual distance is beyond max_distance.
+@ character means the beginning of the input string. Return empty list if the actual distance is beyond max_distance.
